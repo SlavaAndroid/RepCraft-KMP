@@ -1,0 +1,15 @@
+package com.storytoys.disney.pixar.coloring.princess.googlep.data.repository
+
+import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.UserProfile
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+
+class IosUserProfileRepositoryImpl : UserProfileRepository {
+    private val _profile = MutableStateFlow<UserProfile?>(null)
+
+    override fun observeUserProfile(): Flow<UserProfile?> = _profile
+
+    override suspend fun saveUserProfile(profile: UserProfile) {
+        _profile.value = profile
+    }
+}
