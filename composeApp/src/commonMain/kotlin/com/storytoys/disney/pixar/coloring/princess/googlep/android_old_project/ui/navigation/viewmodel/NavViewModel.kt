@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.ui.navigation.viewmodel
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.ui.navigation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

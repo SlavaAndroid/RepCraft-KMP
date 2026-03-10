@@ -1,7 +1,8 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.onboarding.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.onboarding.ui
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -18,15 +19,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Equipment
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Equipment
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.ExperienceLevel
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Goal
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.MuscleGroup
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Goal
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.MuscleGroup
 
 @Composable
 fun OnboardingScreen(
     onOnboardingComplete: () -> Unit,
-    vm: OnboardingViewModel = viewModel(factory = OnboardingViewModel.Factory)
+    vm: OnboardingViewModel = viewModel(factory = OnboardingViewModel.Companion.Factory)
 ) {
     Column(
         modifier = Modifier
@@ -185,7 +186,7 @@ private fun WelcomeStep() {
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
-                    text = "RepCraft",
+                    text = "Strong Wings",
                     style = MaterialTheme.typography.displaySmall,
                     fontWeight = FontWeight.Black,
                     color = MaterialTheme.colorScheme.primary
@@ -401,7 +402,7 @@ private fun ToggleCard(label: String, selected: Boolean, onClick: () -> Unit) {
             else MaterialTheme.colorScheme.surfaceVariant
         ),
         shape = MaterialTheme.shapes.large,
-        border = if (selected) androidx.compose.foundation.BorderStroke(
+        border = if (selected) BorderStroke(
             2.dp, MaterialTheme.colorScheme.primary
         ) else null
     ) {
@@ -450,7 +451,7 @@ private fun SelectionCard(emoji: String, description: String, selected: Boolean,
             else MaterialTheme.colorScheme.surfaceVariant
         ),
         shape = MaterialTheme.shapes.large,
-        border = if (selected) androidx.compose.foundation.BorderStroke(
+        border = if (selected) BorderStroke(
             2.dp, MaterialTheme.colorScheme.primary
         ) else null
     ) {

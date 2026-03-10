@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.workout.active.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.workout.active.ui
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
@@ -29,7 +29,7 @@ import com.storytoys.disney.pixar.coloring.princess.googlep.ui.platform.BackHand
 fun ActiveWorkoutScreen(
     onWorkoutComplete: (Long) -> Unit,
     onNavigateBack: () -> Unit,
-    vm: ActiveWorkoutViewModel = viewModel(factory = ActiveWorkoutViewModel.Factory)
+    vm: ActiveWorkoutViewModel = viewModel(factory = ActiveWorkoutViewModel.Companion.Factory)
 ) {
     var showExitDialog by remember { mutableStateOf(false) }
 

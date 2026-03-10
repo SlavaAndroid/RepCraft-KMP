@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.progress.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.progress.ui
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
@@ -24,7 +24,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.storytoys.disney.pixar.coloring.princess.googlep.feature.progress.ui.ProgressViewModel
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.workout.summary.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.workout.summary.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.di.AppContainerHolder
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.WorkoutSession
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.WorkoutSession
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first

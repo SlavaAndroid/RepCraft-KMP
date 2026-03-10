@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.progress.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.progress.ui
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*

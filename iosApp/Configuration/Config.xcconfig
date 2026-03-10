@@ -1,7 +1,7 @@
-TEAM_ID=
+TEAM_ID=3M8ZQ9989V
 
-PRODUCT_NAME=RepCraft
-PRODUCT_BUNDLE_IDENTIFIER=com.storytoys.disney.pixar.coloring.princess.googlep.RepCraft$(TEAM_ID)
+PRODUCT_NAME=Strong Wings
+    PRODUCT_BUNDLE_IDENTIFIER=com.flu.test.testkmp
 
 CURRENT_PROJECT_VERSION=1
 MARKETING_VERSION=1.0

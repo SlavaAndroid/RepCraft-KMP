@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.workout.active.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.workout.active.ui
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -9,8 +9,8 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.di.AppContainerHolder
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.PlannedExercise
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.WorkoutSession
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.PlannedExercise
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.WorkoutSession
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

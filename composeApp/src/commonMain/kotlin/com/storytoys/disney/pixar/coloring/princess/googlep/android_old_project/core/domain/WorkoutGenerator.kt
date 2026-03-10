@@ -1,13 +1,13 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.core.domain
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain
 
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.Exercise
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.PlannedExercise
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.UserProfile
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.WorkoutPlan
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Equipment
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Goal
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.MuscleGroup
-import com.storytoys.disney.pixar.coloring.princess.googlep.data.local.source.ExerciseDataSource
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.Exercise
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.PlannedExercise
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.UserProfile
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.WorkoutPlan
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Equipment
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Goal
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.MuscleGroup
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.data.local.source.ExerciseDataSource
 
 class WorkoutGenerator(private val dataSource: ExerciseDataSource) {
 

@@ -1,10 +1,10 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.data.local.source
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.data.local.source
 
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.Exercise
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Equipment
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.Exercise
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Equipment
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.ExperienceLevel
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.MuscleGroup
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.WorkoutPhase
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.MuscleGroup
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.WorkoutPhase
 class ExerciseDataSource {
 
     val allExercises: List<Exercise> get() = warmUpExercises + mainExercises + cooldownExercises

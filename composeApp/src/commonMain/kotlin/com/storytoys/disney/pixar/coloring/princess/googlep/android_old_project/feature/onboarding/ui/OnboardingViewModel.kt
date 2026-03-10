@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.onboarding.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.onboarding.ui
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -9,11 +9,11 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.di.AppContainerHolder
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.UserProfile
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Equipment
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.UserProfile
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Equipment
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.ExperienceLevel
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Goal
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.MuscleGroup
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Goal
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.MuscleGroup
 import kotlinx.coroutines.launch
 
 class OnboardingViewModel : ViewModel() {

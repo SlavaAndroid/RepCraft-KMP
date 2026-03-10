@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.library.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.library.ui
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -8,9 +8,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.di.AppContainerHolder
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.Exercise
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Equipment
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.MuscleGroup
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.Exercise
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Equipment
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.MuscleGroup
 
 class ExerciseLibraryViewModel : ViewModel() {
 

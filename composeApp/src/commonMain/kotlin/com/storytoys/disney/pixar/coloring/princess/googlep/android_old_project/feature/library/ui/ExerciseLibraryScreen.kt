@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.library.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.library.ui
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
@@ -22,15 +22,15 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.Exercise
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Equipment
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.MuscleGroup
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.Exercise
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Equipment
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.MuscleGroup
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ExerciseLibraryScreen(
-    vm: ExerciseLibraryViewModel = viewModel(factory = ExerciseLibraryViewModel.Factory)
+    vm: ExerciseLibraryViewModel = viewModel(factory = ExerciseLibraryViewModel.Companion.Factory)
 ) {
     val selectedExercise = vm.selectedExercise
 

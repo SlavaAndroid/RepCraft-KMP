@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model
 
 data class PlannedExercise(
     val exercise: Exercise,

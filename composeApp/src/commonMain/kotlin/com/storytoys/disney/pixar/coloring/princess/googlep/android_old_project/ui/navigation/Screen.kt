@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.ui.navigation
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.ui.navigation
 
 sealed class Screen(val route: String) {
     object Onboarding : Screen("onboarding")

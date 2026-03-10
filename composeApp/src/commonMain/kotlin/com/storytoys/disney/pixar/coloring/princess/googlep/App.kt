@@ -17,8 +17,8 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.storytoys.disney.pixar.coloring.princess.googlep.ui.navigation.RepCraftNavHost
-import com.storytoys.disney.pixar.coloring.princess.googlep.ui.navigation.Screen
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.ui.navigation.RepCraftNavHost
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.ui.navigation.Screen
 import com.storytoys.disney.pixar.coloring.princess.googlep.ui.theme.RepCraftTheme
 
 private data class BottomNavItem(val screen: Screen, val label: String, val icon: @Composable () -> Unit)

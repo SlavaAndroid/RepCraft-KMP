@@ -1,10 +1,11 @@
 package com.storytoys.disney.pixar.coloring.princess.googlep.data.repository
 
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.UserProfile
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Equipment
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.UserProfile
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Equipment
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.ExperienceLevel
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Goal
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.MuscleGroup
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Goal
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.MuscleGroup
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.data.repository.UserProfileRepository
 import com.storytoys.disney.pixar.coloring.princess.googlep.data.local.dao.UserProfileDao
 import com.storytoys.disney.pixar.coloring.princess.googlep.data.local.datastore.OnboardingDataStore
 import com.storytoys.disney.pixar.coloring.princess.googlep.data.local.entity.UserProfileEntity

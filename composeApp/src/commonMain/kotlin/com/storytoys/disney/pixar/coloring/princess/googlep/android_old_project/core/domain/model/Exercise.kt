@@ -1,9 +1,9 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model
 
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.Equipment
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Equipment
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.ExperienceLevel
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.MuscleGroup
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.WorkoutPhase
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.MuscleGroup
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.WorkoutPhase
 
 data class Exercise(
     val id: String,

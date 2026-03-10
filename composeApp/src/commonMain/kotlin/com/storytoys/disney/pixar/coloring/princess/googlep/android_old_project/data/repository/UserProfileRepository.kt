@@ -1,6 +1,6 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.data.repository
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.data.repository
 
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.UserProfile
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.UserProfile
 import kotlinx.coroutines.flow.Flow
 
 interface UserProfileRepository {

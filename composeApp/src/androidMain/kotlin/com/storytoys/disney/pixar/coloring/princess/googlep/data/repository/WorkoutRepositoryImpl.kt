@@ -1,6 +1,7 @@
 package com.storytoys.disney.pixar.coloring.princess.googlep.data.repository
 
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.WorkoutSession
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.WorkoutSession
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.data.repository.WorkoutRepository
 import com.storytoys.disney.pixar.coloring.princess.googlep.data.local.dao.WorkoutSessionDao
 import com.storytoys.disney.pixar.coloring.princess.googlep.data.local.entity.WorkoutSessionEntity
 import kotlinx.coroutines.flow.Flow

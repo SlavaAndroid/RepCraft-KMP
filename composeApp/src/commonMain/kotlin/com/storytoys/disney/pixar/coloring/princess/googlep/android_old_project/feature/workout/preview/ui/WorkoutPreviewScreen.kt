@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.workout.preview.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.workout.preview.ui
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
@@ -19,8 +19,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.PlannedExercise
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.WorkoutPhase
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.PlannedExercise
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.WorkoutPhase
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -28,7 +28,7 @@ import kotlinx.coroutines.delay
 fun WorkoutPreviewScreen(
     onNavigateToActiveWorkout: () -> Unit,
     onNavigateBack: () -> Unit,
-    vm: WorkoutPreviewViewModel = viewModel(factory = WorkoutPreviewViewModel.Factory)
+    vm: WorkoutPreviewViewModel = viewModel(factory = WorkoutPreviewViewModel.Companion.Factory)
 ) {
     val plan = vm.plan
 

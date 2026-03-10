@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.workout.summary.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.workout.summary.ui
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
@@ -27,7 +27,7 @@ import kotlinx.coroutines.delay
 fun WorkoutSummaryScreen(
     sessionId: Long,
     onNavigateHome: () -> Unit,
-    vm: WorkoutSummaryViewModel = viewModel(factory = WorkoutSummaryViewModel.Factory)
+    vm: WorkoutSummaryViewModel = viewModel(factory = WorkoutSummaryViewModel.Companion.Factory)
 ) {
     val session by vm.session.collectAsStateWithLifecycle()
 

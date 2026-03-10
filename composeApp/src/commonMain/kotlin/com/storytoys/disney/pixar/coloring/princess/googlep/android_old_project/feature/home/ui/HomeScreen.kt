@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.feature.home.ui
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.home.ui
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
@@ -20,20 +20,26 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.WorkoutSession
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.WorkoutSession
 import kotlinx.coroutines.delay
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
 
+private const val PRIVACY_POLICY_URL = "https://doc-hosting.flycricket.io/strong-wings-privacy-policy/9cfa1a92-029e-4af8-b816-c784f666ca7a/privacy"
+private const val TERMS_OF_USE_URL = "https://doc-hosting.flycricket.io/strong-wings-terms-of-use/8ba5554d-7523-45dd-940e-3b326a3abfd8/terms"
+
 @Composable
 fun HomeScreen(
     onNavigateToPreview: () -> Unit,
-    vm: HomeViewModel = viewModel(factory = HomeViewModel.Factory)
+    onNavigateToOnboarding: () -> Unit,
+    vm: HomeViewModel = viewModel(factory = HomeViewModel.Companion.Factory)
 ) {
     val profile by vm.userProfile.collectAsStateWithLifecycle()
     val sessions by vm.recentSessions.collectAsStateWithLifecycle()
@@ -64,7 +70,7 @@ fun HomeScreen(
             ) {
                 Column {
                     Text(
-                        text = "RepCraft",
+                        text = "Strong Wings",
                         style = MaterialTheme.typography.headlineLarge,
                         fontWeight = FontWeight.Black,
                         color = MaterialTheme.colorScheme.primary
@@ -165,7 +171,7 @@ fun HomeScreen(
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     AssistChip(
-                        onClick = {},
+                        onClick = onNavigateToOnboarding,
                         label = {
                             Text(
                                 p.goal.name.replace("_", " ").lowercase().replaceFirstChar { it.uppercase() },
@@ -175,7 +181,7 @@ fun HomeScreen(
                         shape = MaterialTheme.shapes.large
                     )
                     AssistChip(
-                        onClick = {},
+                        onClick = onNavigateToOnboarding,
                         label = {
                             Text(
                                 p.experienceLevel.name.lowercase().replaceFirstChar { it.uppercase() },
@@ -199,7 +205,40 @@ fun HomeScreen(
             )
         }
 
-        item { Spacer(modifier = Modifier.height(24.dp)) }
+        item { Spacer(modifier = Modifier.height(8.dp)) }
+
+        item {
+            val uriHandler = LocalUriHandler.current
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                TextButton(onClick = { uriHandler.openUri(PRIVACY_POLICY_URL) }) {
+                    Text(
+                        text = "Privacy Policy",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                Text(
+                    text = "·",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.align(Alignment.CenterVertically)
+                )
+                TextButton(onClick = { uriHandler.openUri(TERMS_OF_USE_URL) }) {
+                    Text(
+                        text = "Terms of Use",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        }
+
+        item { Spacer(modifier = Modifier.height(16.dp)) }
 
         if (sessions.isNotEmpty()) {
             item {
@@ -240,7 +279,7 @@ private fun AnimatedStatCard(
     icon: ImageVector,
     targetValue: Int,
     label: String,
-    iconColor: androidx.compose.ui.graphics.Color
+    iconColor: Color
 ) {
     var displayValue by remember { mutableStateOf(0) }
     LaunchedEffect(targetValue) {

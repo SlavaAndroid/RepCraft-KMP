@@ -1,4 +1,4 @@
-package com.storytoys.disney.pixar.coloring.princess.googlep.ui.navigation
+package com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -10,15 +10,15 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.storytoys.disney.pixar.coloring.princess.googlep.feature.home.ui.HomeScreen
-import com.storytoys.disney.pixar.coloring.princess.googlep.feature.library.ui.ExerciseLibraryScreen
-import com.storytoys.disney.pixar.coloring.princess.googlep.feature.onboarding.ui.OnboardingScreen
-import com.storytoys.disney.pixar.coloring.princess.googlep.feature.progress.ui.ProgressDashboardScreen
-import com.storytoys.disney.pixar.coloring.princess.googlep.feature.progress.ui.WorkoutHistoryScreen
-import com.storytoys.disney.pixar.coloring.princess.googlep.feature.workout.active.ui.ActiveWorkoutScreen
-import com.storytoys.disney.pixar.coloring.princess.googlep.feature.workout.preview.ui.WorkoutPreviewScreen
-import com.storytoys.disney.pixar.coloring.princess.googlep.feature.workout.summary.ui.WorkoutSummaryScreen
-import com.storytoys.disney.pixar.coloring.princess.googlep.ui.navigation.viewmodel.NavViewModel
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.home.ui.HomeScreen
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.library.ui.ExerciseLibraryScreen
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.onboarding.ui.OnboardingScreen
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.progress.ui.ProgressDashboardScreen
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.progress.ui.WorkoutHistoryScreen
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.workout.active.ui.ActiveWorkoutScreen
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.workout.preview.ui.WorkoutPreviewScreen
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.feature.workout.summary.ui.WorkoutSummaryScreen
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.ui.navigation.viewmodel.NavViewModel
 
 @Composable
 fun RepCraftNavHost(
@@ -45,7 +45,8 @@ fun RepCraftNavHost(
         }
         composable(Screen.Home.route) {
             HomeScreen(
-                onNavigateToPreview = { navController.navigate(Screen.WorkoutPreview.route) }
+                onNavigateToPreview = { navController.navigate(Screen.WorkoutPreview.route) },
+                onNavigateToOnboarding = { navController.navigate(Screen.Onboarding.route) }
             )
         }
         composable(Screen.WorkoutPreview.route) {
