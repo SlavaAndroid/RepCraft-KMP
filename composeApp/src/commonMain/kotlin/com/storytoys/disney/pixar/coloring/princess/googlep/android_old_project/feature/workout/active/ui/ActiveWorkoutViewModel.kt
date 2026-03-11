@@ -22,7 +22,7 @@ class ActiveWorkoutViewModel : ViewModel() {
     private val workoutRepo = container.workoutRepository
 
     val plan = container.currentPlan
-    val exercises: List<PlannedExercise> = plan?.allExercises ?: emptyList()
+    val exercises: List<PlannedExercise> = plan?.main ?: emptyList()
 
     var currentExerciseIndex by mutableStateOf(0)
         private set

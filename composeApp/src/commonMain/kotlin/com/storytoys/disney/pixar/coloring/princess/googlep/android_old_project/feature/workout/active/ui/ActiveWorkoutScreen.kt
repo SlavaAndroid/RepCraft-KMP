@@ -204,6 +204,7 @@ private fun ExercisingScreen(vm: ActiveWorkoutViewModel, onExit: () -> Unit) {
                 ex.exercise.muscleGroups.take(3).forEach { mg ->
                     AssistChip(
                         onClick = {},
+                        enabled = false,
                         label = {
                             Text(
                                 mg.name.lowercase().replaceFirstChar { it.uppercase() },

@@ -109,21 +109,21 @@ fun WorkoutPreviewScreen(
 
             if (plan.warmUp.isNotEmpty()) {
                 item { SectionLabel(title = "Warm-Up", count = plan.warmUp.size, emoji = "🔆") }
-                itemsIndexed(plan.warmUp) { i, ex ->
+                itemsIndexed(plan.warmUp, key = { _, ex -> ex.exercise.id }) { i, ex ->
                     AnimatedExerciseCard(exercise = ex, index = i, phase = WorkoutPhase.WARM_UP)
                 }
             }
 
             if (plan.main.isNotEmpty()) {
                 item { SectionLabel(title = "Main Workout", count = plan.main.size, emoji = "⚡") }
-                itemsIndexed(plan.main) { i, ex ->
+                itemsIndexed(plan.main, key = { _, ex -> ex.exercise.id }) { i, ex ->
                     AnimatedExerciseCard(exercise = ex, index = i + plan.warmUp.size, phase = WorkoutPhase.MAIN)
                 }
             }
 
             if (plan.cooldown.isNotEmpty()) {
                 item { SectionLabel(title = "Cool-Down", count = plan.cooldown.size, emoji = "🧊") }
-                itemsIndexed(plan.cooldown) { i, ex ->
+                itemsIndexed(plan.cooldown, key = { _, ex -> ex.exercise.id }) { i, ex ->
                     AnimatedExerciseCard(exercise = ex, index = i + plan.warmUp.size + plan.main.size, phase = WorkoutPhase.COOLDOWN)
                 }
             }
@@ -180,8 +180,8 @@ private fun SectionLabel(title: String, count: Int, emoji: String) {
 @Composable
 private fun AnimatedExerciseCard(exercise: PlannedExercise, index: Int, phase: WorkoutPhase) {
     var visible by remember { mutableStateOf(false) }
-    LaunchedEffect(index) {
-        delay(index * 60L)
+    LaunchedEffect(Unit) {
+        delay(index * 10L)
         visible = true
     }
     AnimatedVisibility(

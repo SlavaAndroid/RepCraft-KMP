@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.WorkoutSession
+import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.ExperienceLevel
 import kotlinx.coroutines.delay
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
@@ -163,34 +164,37 @@ fun HomeScreen(
         item { Spacer(modifier = Modifier.height(16.dp)) }
 
         item {
-            profile?.let { p ->
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    AssistChip(
-                        onClick = onNavigateToOnboarding,
-                        label = {
-                            Text(
-                                p.goal.name.replace("_", " ").lowercase().replaceFirstChar { it.uppercase() },
-                                style = MaterialTheme.typography.labelMedium
-                            )
-                        },
-                        shape = MaterialTheme.shapes.large
-                    )
-                    AssistChip(
-                        onClick = onNavigateToOnboarding,
-                        label = {
-                            Text(
-                                p.experienceLevel.name.lowercase().replaceFirstChar { it.uppercase() },
-                                style = MaterialTheme.typography.labelMedium
-                            )
-                        },
-                        shape = MaterialTheme.shapes.large
-                    )
-                }
+            val selectedLevel = profile?.experienceLevel ?: ExperienceLevel.BEGINNER
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                FilterChip(
+                    selected = selectedLevel == ExperienceLevel.BEGINNER,
+                    onClick = { vm.updateLevel(ExperienceLevel.BEGINNER) },
+                    label = {
+                        Text(
+                            "Beginner",
+                            fontWeight = if (selectedLevel == ExperienceLevel.BEGINNER) FontWeight.Bold else FontWeight.Normal
+                        )
+                    },
+                    shape = MaterialTheme.shapes.large,
+                    modifier = Modifier.weight(1f)
+                )
+                FilterChip(
+                    selected = selectedLevel == ExperienceLevel.INTERMEDIATE,
+                    onClick = { vm.updateLevel(ExperienceLevel.INTERMEDIATE) },
+                    label = {
+                        Text(
+                            "Intermediate",
+                            fontWeight = if (selectedLevel == ExperienceLevel.INTERMEDIATE) FontWeight.Bold else FontWeight.Normal
+                        )
+                    },
+                    shape = MaterialTheme.shapes.large,
+                    modifier = Modifier.weight(1f)
+                )
             }
         }
 

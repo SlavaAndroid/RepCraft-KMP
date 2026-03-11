@@ -14,7 +14,7 @@ import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.
 class IosAppContainer : AppContainer {
     override val onboardingStorage: OnboardingStorage = IosOnboardingStorage()
     override val exerciseDataSource = ExerciseDataSource()
-    override val userProfileRepository: UserProfileRepository = IosUserProfileRepositoryImpl()
+    override val userProfileRepository: UserProfileRepository = IosUserProfileRepositoryImpl(onboardingStorage)
     override val workoutRepository: WorkoutRepository = IosWorkoutRepositoryImpl()
     override val workoutGenerator = WorkoutGenerator(exerciseDataSource)
     override var currentPlan: WorkoutPlan? = null

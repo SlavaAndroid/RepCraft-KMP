@@ -11,6 +11,9 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import com.storytoys.disney.pixar.coloring.princess.googlep.core.di.AppContainerHolder
 import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.UserProfile
 import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.WorkoutSession
+import com.storytoys.disney.pixar.coloring.princess.googlep.android_old_project.core.domain.model.enums.Goal
+import com.storytoys.disney.pixar.coloring.princess.googlep.core.domain.model.enums.ExperienceLevel
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
@@ -42,6 +45,20 @@ class HomeViewModel : ViewModel() {
         private set
 
     fun setDuration(d: Int) { selectedDuration = d }
+
+    fun updateGoal(goal: Goal) {
+        viewModelScope.launch {
+            val current = userProfile.value ?: return@launch
+            userProfileRepo.saveUserProfile(current.copy(goal = goal))
+        }
+    }
+
+    fun updateLevel(level: ExperienceLevel) {
+        viewModelScope.launch {
+            val current = userProfile.value ?: UserProfile(experienceLevel = level, onboardingComplete = true)
+            userProfileRepo.saveUserProfile(current.copy(experienceLevel = level))
+        }
+    }
 
     fun generateWorkout(): Boolean {
         val profile = userProfile.value ?: return false
