@@ -14,7 +14,7 @@ private val iosContainer by lazy { IosAppContainer() }
 fun MainViewController() = run {
     AppContainerHolder.instance = iosContainer
     CoroutineScope(Dispatchers.IO).launch {
-//        SessionsService.checkSessions()
+        SessionsService.checkSessions()
     }
     ComposeUIViewController { App() }
 }
