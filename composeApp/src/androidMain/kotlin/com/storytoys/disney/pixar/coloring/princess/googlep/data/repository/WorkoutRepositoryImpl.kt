@@ -13,13 +13,24 @@ class WorkoutRepositoryImpl(
 ) : WorkoutRepository {
 
     override fun observeAllSessions(): Flow<List<WorkoutSession>> =
-        dao.observeAll().map { list -> list.map { it.toDomain() } }
+        dao.observeAll().map { list ->
+            println("WorkoutRepository: Loaded ${list.size} sessions from database")
+            list.map { it.toDomain() }
+        }
 
     override suspend fun getRecentSessions(): List<WorkoutSession> =
         dao.getRecent().map { it.toDomain() }
 
-    override suspend fun insertSession(session: WorkoutSession): Long =
-        dao.insert(session.toEntity())
+    override suspend fun insertSession(session: WorkoutSession): Long {
+        return try {
+            val id = dao.insert(session.toEntity())
+            println("WorkoutRepository: Saved session id=$id completedAt=${session.completedAt}")
+            id
+        } catch (e: Exception) {
+            println("WorkoutRepository: Error saving session: ${e.message}")
+            throw e
+        }
+    }
 
     override suspend fun getAllCompletedDates(): List<Long> =
         dao.getAllCompletedDates()
